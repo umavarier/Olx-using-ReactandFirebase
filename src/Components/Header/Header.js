@@ -1,4 +1,5 @@
 import React , {useContext} from 'react';
+import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import './Header.css';
 import { AuthContext } from '../../store/FirebaseContext';
@@ -48,11 +49,13 @@ function Header() {
         </div>
 
         <div className="sellMenu">
+        <Link to="/create"> 
           <SellButton></SellButton>
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>
             <span>SELL</span>
           </div>
+          </Link>
         </div>
       </div>
     </div>
